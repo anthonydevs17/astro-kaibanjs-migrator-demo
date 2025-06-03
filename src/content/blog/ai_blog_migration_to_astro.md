@@ -320,7 +320,44 @@ Start the development server:
 npm run dev
 ```
 
+### Step 10: Migration Process
+
+Now that our system is up and running, let's walk through the actual migration process:
+
+1. **Input the URL**: In the import interface, paste the URL of the blog post you want to migrate into the input field.
+   ![Input the URL](/url-input.png)
+
+2. **Start Migration**: Click the "Import Post" button to begin the process. The system will:
+
+   - Initialize the KaibanJS workflow
+   - Show real-time status updates of both agents
+   - Display task progress and any potential issues
+
+3. **Monitor the Process**: You can watch as the agents work:
+
+   - The Content Fetcher agent retrieves and purifies the content
+   - The Content Cleaner agent structures the content with proper frontmatter
+   - The workflow status updates in real-time
+
+4. **Review the Result**: Once the migration is complete, you'll see:
+   ![Edit the content](/result-edit.png)
+   - A preview of the migrated content
+   - The complete Markdown file with proper frontmatter
+   - Options to:
+     - Edit the content directly in the interface
+     - Copy the entire Markdown to clipboard
+     - Download the file as `.md` for your Astro content folder
+
+The migrated content will maintain:
+
+- The original article's structure and formatting
+- All images and media content
+- Proper Markdown syntax
+- Astro-compatible frontmatter
+  ![Migration Result Preview](/result-preview.png)
+
 The system is now ready to handle blog migrations. The AI agents will work together to fetch, process, and format content for your Astro blog, streamlining the migration process significantly.
+![Migration Result Preview](/result-complete.png)
 
 ## Conclusion
 
