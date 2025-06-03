@@ -1,0 +1,33 @@
+---
+import { zodToJsonSchema } from 'zod-to-json-schema';
+import { ImportForm } from '../components/ImportForm';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { collections } from '../content.config';
+import type { ZodType } from 'zod';
+
+const blogSchema = collections?.blog?.schema as ZodType;
+
+const schema: string = blogSchema
+  //@ts-ignore
+  ? JSON.stringify(zodToJsonSchema(blogSchema, { $refStrategy: 'none' }))
+  : '{}';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Import Blog Post" 
+      description="Import blog posts from URLs to markdown files" 
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="w-full">
+      <ImportForm client:load schema={schema} />
+    </main>
+    <Footer />
+  </body>
+</html>
