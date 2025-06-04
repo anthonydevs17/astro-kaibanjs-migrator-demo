@@ -357,7 +357,17 @@ The migrated content will maintain:
   ![Migration Result Preview](/result-preview.png)
 
 The system is now ready to handle blog migrations. The AI agents will work together to fetch, process, and format content for your Astro blog, streamlining the migration process significantly.
+
 ![Migration Result Preview](/result-complete.png)
+
+## Try It Yourself!
+
+Want to experience the power of AI-driven blog migration? Check out our live demo and source code:
+
+- 🚀 [Live Demo](https://astro-kaibanjs-migrator-demo.vercel.app/import) - Try the migration tool in action
+- 📦 [GitHub Repository](https://github.com/anthonydevs17/astro-kaibanjs-migrator-demo) - Get the complete source code
+
+Feel free to fork the repository, experiment with the code, and adapt it to your needs. Contributions and feedback are always welcome!
 
 ## Conclusion
 
